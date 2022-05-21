@@ -39,7 +39,7 @@ tries = 0
 
 while True:
     if tries > random.randint(100000000000000, 100000000000000000):  # chance to get fake btc
-        print(Fore.CYAN + "[+]"+ Fore.RED + " bc1" + id_gen() + Fore.GREEN +" | Valid |  " + "0.2339 BTC")
+        print(Fore.CYAN + "[+]" + Fore.RED + " bc3" + id_gen() + Fore.GREEN +" |  Valid  |  " + str(round(random.uniform(0,2), 4)), "BTC")
         print(Fore.GREEN + "Withdrawing to your address...")
         time.sleep(7.5)
         tries = 0
