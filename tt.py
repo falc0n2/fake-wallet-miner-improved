@@ -4,11 +4,29 @@ import string
 import os
 from colorama import init, Fore
 init(convert=True)
+import subprocess, requests
 
 print(Fore.MAGENTA + "Welcome to the Fake Wallet Miner")
 time.sleep(1.8)
 
 os.system("cls")
+
+hardwareid = subprocess.check_output('wmic csproduct get uuid').decode().split('\n')[1].strip()
+site = requests.get("https://pastebin.com/raw/yourpastebinlinkhere")
+
+try:
+    if hardwareid in site.text:
+        pass
+    else:
+        print("You are not Whitelisted!")
+        print(f"Your HWID is {hardwareid}")
+        input()
+        exit(123)
+except:
+    print("Failed to connect to database")
+    input()
+    exit(123)
+
 LicenseKey = input(Fore.RED + "Input License Key >" + Fore.RESET + " ")
 if LicenseKey == "fSNdnw24ajTud9NvgaL7vGuHy4ksKnSZ3LbZaeMwPkXj8gh":
     print(Fore.BLUE + "One second while I check if the key is valid on our servers!")
