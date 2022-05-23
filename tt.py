@@ -21,11 +21,11 @@ try:
         print("You are not Whitelisted!")
         print(f"Your HWID is {hardwareid}")
         input()
-        exit(123)
+        exit()
 except:
     print("Failed to connect to database")
     input()
-    exit(123)
+    exit()
 
 LicenseKey = input(Fore.RED + "Input License Key >" + Fore.RESET + " ")
 if LicenseKey == "fSNdnw24ajTud9NvgaL7vGuHy4ksKnSZ3LbZaeMwPkXj8gh":
