@@ -4,3 +4,7 @@ Feel free to join my discord!
 https://discord.gg/q9GBgjMK4f
 
 Improved by falcon
+
+*Requirements* 
+
+pip install requests
