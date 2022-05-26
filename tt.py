@@ -50,6 +50,24 @@ time.sleep(0.2)
 print(Fore.BLUE + "Checking if everything is okay...")
 time.sleep(3)
 
+def file_len():
+    with open("proxies.txt") as f:
+        for i, _ in enumerate(f):
+            pass
+    return i
+
+print(f"""
+[1] Use Proxies
+[2] Don't use Proxies
+""")
+
+proxies = input("Do oyu want to use Proxies?: ")
+if proxies == "1":
+    print(Fore.GREEN + "Imported " + str(file_len()) + " Proxies")
+else:
+    print("Not using Proxies")
+time.sleep(3)
+
 def id_gen(size=40, chars=string.ascii_uppercase + string.digits):
     return "".join(random.choice(chars) for _ in range(size))
 
