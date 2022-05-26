@@ -61,7 +61,7 @@ print(f"""
 [2] Don't use Proxies
 """)
 
-proxies = input("Do oyu want to use Proxies?: ")
+proxies = input("Do you want to use Proxies?: ")
 if proxies == "1":
     print(Fore.GREEN + "Imported " + str(file_len()) + " Proxies")
 else:
