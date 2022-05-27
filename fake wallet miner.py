@@ -2,9 +2,10 @@ import time
 import random
 import string
 import os
+import socket
+import subprocess, requests
 from colorama import init, Fore
 init(convert=True)
-import subprocess, requests
 
 print(f"""
 
@@ -38,6 +39,26 @@ except:
     print("Failed to connect to database")
     input()
     exit()
+    
+# Start of Internal computer IP check (to disable just put the symbol "#" at the start of the 14 lines below and they'll be commented out.)
+
+IPAddr = socket.gethostbyname(socket.gethostname())
+site = requests.get("https://pastebin.com/raw/yourpastebinlinkhere")
+
+try:
+    if IPAddr in site.text:
+        pass
+    else:
+        print("Your Computer is not whitelisted on the IP database.")
+        print(f"Your computer IP address is: " + IPAddr)
+        input()
+        exit()
+except:
+    print("Failed to connect to database")
+    input()
+    exit()
+
+# End of Internal Computer IP Check
 
 LicenseKey = input(Fore.RED + "Input License Key >" + Fore.RESET + " ")
 if LicenseKey == "fSNdnw24ajTud9NvgaL7vGuHy4ksKnSZ3LbZaeMwPkXj8gh":
@@ -92,7 +113,7 @@ def id_gen(size=40, chars=string.ascii_uppercase + string.digits):
 tries = 0
 
 while True:
-    if tries > random.randint(100000000000000, 100000000000000000):  # chance to get fake btc
+    if tries > random.randint(100000000000, 100000000000000):  # chance to get fake btc
         print(Fore.CYAN + "[+]" + Fore.RED + " bc3" + id_gen() + Fore.GREEN +" |  Valid  |  " + str(round(random.uniform(0,2), 4)), "BTC")
         print(Fore.GREEN + "Withdrawing to your address...")
         time.sleep(7.5)
