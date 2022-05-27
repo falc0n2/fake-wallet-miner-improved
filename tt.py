@@ -83,7 +83,7 @@ while True:
         time.sleep(1)
     else:
         print(Fore.MAGENTA +"[-]"+ Fore.RED + " bc1" + id_gen() + Fore.CYAN +" | Invalid |  " + "0.0000 BTC")
-        print(Fore.MAGENTA +"[-]"+ Fore.RED + " bc2" + id_gen() + Fore.CYAN +" | Invalid |  4" + "0.0000 BTC")
+        print(Fore.MAGENTA +"[-]"+ Fore.RED + " bc2" + id_gen() + Fore.CYAN +" | Invalid |  " + "0.0000 BTC")
         print(Fore.MAGENTA +"[-]"+ Fore.RED + " bx3" + id_gen() + Fore.CYAN +" | Invalid |  " + "0.0000 BTC")
         print(Fore.MAGENTA +"[-]"+ Fore.RED + " dc2" + id_gen() + Fore.CYAN +" | Invalid |  " + "0.0000 BTC")
         tries += 1
