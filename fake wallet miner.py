@@ -6,7 +6,11 @@ from colorama import init, Fore
 init(convert=True)
 import subprocess, requests
 
-print(Fore.MAGENTA + "Welcome to the Fake Wallet Miner")
+print(f"""
+
+you can get wallet text from this website, just replace this entire line with the text: https://patorjk.com/software/taag/#p=display&f=Doom&t=FAKE%20WALLET%20MINER
+
+""")
 time.sleep(1.8)
 
 os.system("cls")
