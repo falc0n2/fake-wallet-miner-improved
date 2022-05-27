@@ -8,7 +8,15 @@ import subprocess, requests
 
 print(f"""
 
-you can get wallet text from this website, just replace this entire line with the text: https://patorjk.com/software/taag/#p=display&f=Doom&t=FAKE%20WALLET%20MINER
+  ______      _  ________  __          __     _      _      ______ _______   __  __ _____ _   _ ______ _____  
+ |  ____/\   | |/ /  ____| \ \        / /\   | |    | |    |  ____|__   __| |  \/  |_   _| \ | |  ____|  __ \ 
+ | |__ /  \  | ' /| |__     \ \  /\  / /  \  | |    | |    | |__     | |    | \  / | | | |  \| | |__  | |__) |
+ |  __/ /\ \ |  < |  __|     \ \/  \/ / /\ \ | |    | |    |  __|    | |    | |\/| | | | | . ` |  __| |  _  / 
+ | | / ____ \| . \| |____     \  /\  / ____ \| |____| |____| |____   | |    | |  | |_| |_| |\  | |____| | \ \ 
+ |_|/_/    \_\_|\_\______|     \/  \/_/    \_\______|______|______|  |_|    |_|  |_|_____|_| \_|______|_|  \_\
+
+
+you can get wallet text from this website, just replace this entire line with the text: https://patorjk.com/software/taag/#p=display&f=BIG&t=FAKE%20WALLET%20MINER
 
 """)
 time.sleep(1.8)
