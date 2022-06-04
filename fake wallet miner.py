@@ -60,18 +60,26 @@ except:
 
 # End of Internal Computer IP Check
 
-LicenseKey = input(Fore.RED + "Input License Key >" + Fore.RESET + " ")
-if LicenseKey == "fSNdnw24ajTud9NvgaL7vGuHy4ksKnSZ3LbZaeMwPkXj8gh":
-    print(Fore.BLUE + "One second while I check if the key is valid on our servers!")
-    time.sleep(5)
-    print(Fore.GREEN + "The key is valid!")
-    time.sleep(2.5)
-else:
-    print(Fore.BLUE + "One second while I check if the key is valid on our servers!")
-    time.sleep(5)
-    print(Fore.RED + "The key is invalid!")
-    print("Exiting...")
-    time.sleep(2)
+licensekey = LicenseKey = input(Fore.RED + "Input License Key >" + Fore.RESET + " ")
+site = requests.get("https://pastebin.com/raw/q2nUbDQM")
+try:
+    if licensekey in site.text:
+        print(Fore.BLUE + "One second while I check if the key is valid on our servers!")
+        time.sleep(5)
+        print(Fore.GREEN + "The key is valid!")
+        time.sleep(2.5)
+        pass
+    else:
+        print(Fore.BLUE + "One second while I check if the key is valid on our servers!")
+        time.sleep(5)
+        print(Fore.RED + "The key is invalid!")
+        print("Exiting...")
+        time.sleep(2)
+        exit()
+
+except:
+    print("Failed to connect to database")
+    input()
     exit()
 
 os.system("cls")
